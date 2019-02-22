@@ -18,8 +18,8 @@ print("the change is \(getMilkVar)")
 func beerSong() -> String {
     var lyrics: String = ""
     var endingNumber = 201
-    for number in 1...endingNumber {
-        let newLine = "\n\(endingNumber - number) bottles of beer on the wall, \(endingNumber - number) bottles of beer. \nTake one down, pass it around, \(endingNumber - number - 1) bottles of beer on the wall.\n"
+    for number in (1...endingNumber).reversed() {
+        let newLine = "\n\(number) bottles of beer on the wall, \(number) bottles of beer. \nTake one down, pass it around, \(number - 1) bottles of beer on the wall.\n"
         lyrics = lyrics + newLine
     }
     return lyrics
