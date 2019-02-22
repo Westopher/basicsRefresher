@@ -15,14 +15,17 @@ var getMilkVar = getMilk(numberOfCartons: 7, howMuchMoneyGiven: 10)
 print("the change is \(getMilkVar)")
 
 
-func beerSong() {
+func beerSong() -> String {
     var lyrics: String = ""
-    for number in 1...5 {
-        print("\(6 - number) bottles of beer on the wall, \(6 - number) bottles of beer, take one down, pass it around, \(number) bottles of beer on the wall.")
+    var endingNumber = 201
+    for number in 1...endingNumber {
+        let newLine = "\n\(endingNumber - number) bottles of beer on the wall, \(endingNumber - number) bottles of beer. \nTake one down, pass it around, \(endingNumber - number - 1) bottles of beer on the wall.\n"
+        lyrics = lyrics + newLine
     }
+    return lyrics
 }
 
-beerSong()
+print(beerSong())
 
 
 
